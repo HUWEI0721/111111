@@ -73,8 +73,8 @@ func (s *SmartContract) Uplink(ctx contractapi.TransactionContextInterface, user
 
 	// 不同用户类型的上链的参数不一致
 	switch userType {
-	// 渔民
-	case "渔民":
+	// 茅台厂商
+	case "茅台厂商":
 		// 将传入的茅台酒上链信息转换为Brewer_input结构体
 		seafood.Brewer_input.Moutai_name = arg1
 		seafood.Brewer_input.Moutai_origin = arg2

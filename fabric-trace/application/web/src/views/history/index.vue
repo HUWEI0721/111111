@@ -215,7 +215,7 @@ export default {
     ]),
     roleClass() {
       switch (this.userType) {
-        case '渔民': return 'fisherman-bg'
+        case '茅台厂商': return 'fisherman-bg'
         case '酿造厂': return 'factory-bg'
         case '物流司机信息': return 'driver-bg'
         case '销售终端': return 'shop-bg'
@@ -224,7 +224,7 @@ export default {
     },
     roleIcon() {
       switch (this.userType) {
-        case '渔民': return 'el-icon-ship'
+        case '茅台厂商': return 'el-icon-ship'
         case '酿造厂': return 'el-icon-office-building'
         case '物流司机信息': return 'el-icon-truck'
         case '销售终端': return 'el-icon-shopping-cart-full'

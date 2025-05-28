@@ -26,15 +26,15 @@
     <el-card class="main-form-card" shadow="hover">
       <el-form ref="form" :model="tracedata" label-width="120px" size="small">
 
-        <el-form-item v-show="userType != '渔民' & userType != '消费者'" label="溯源码:" class="trace-code-item">
+        <el-form-item v-show="userType != '茅台厂商' & userType != '消费者'" label="溯源码:" class="trace-code-item">
           <el-input v-model="tracedata.traceability_code" placeholder="请输入溯源码">
             <template slot="prepend"><i class="el-icon-key"></i></template>
           </el-input>
         </el-form-item>
 
-        <!-- 渔民信息录入区域 -->
-        <div v-show="userType == '渔民'" class="role-form-section">
-          <h3><i class="el-icon-ship"></i> 渔民信息录入 <i class="el-icon-fishing role-specific-icon"></i></h3>
+        <!-- 茅台厂商信息录入区域 -->
+        <div v-show="userType == '茅台厂商'" class="role-form-section">
+          <h3><i class="el-icon-ship"></i> 茅台厂商信息录入 <i class="el-icon-fishing role-specific-icon"></i></h3>
           <el-row :gutter="20">
             <el-col :span="12">
               <el-form-item label="茅台酒名称:">
@@ -285,7 +285,7 @@ export default {
     },
     roleClass() {
       switch (this.userType) {
-        case '渔民':
+        case '茅台厂商':
           return 'fisherman-bg'
         case '酿造厂':
           return 'factory-bg'
@@ -299,7 +299,7 @@ export default {
     },
     roleIcon() {
       switch (this.userType) {
-        case '渔民':
+        case '茅台厂商':
           return 'el-icon-ship'
         case '酿造厂':
           return 'el-icon-office-building'
@@ -349,7 +349,7 @@ export default {
       formData.append('traceability_code', this.tracedata.traceability_code)
       // 根据不同的用户给arg1、arg2、arg3..赋值,
       switch (this.userType) {
-        case '渔民':
+        case '茅台厂商':
           formData.append('arg1', this.tracedata.Brewer_input.Moutai_name)
           formData.append('arg2', this.tracedata.Brewer_input.Moutai_origin)
           formData.append('arg3', this.tracedata.Brewer_input.Moutai_start)

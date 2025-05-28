@@ -120,8 +120,8 @@ export default {
         userType: ''
       },
       options: [{
-        value: '渔民',
-        label: '渔民'
+        value: '茅台厂商',
+        label: '茅台厂商'
       }, {
         value: '酿造厂',
         label: '酿造厂'
