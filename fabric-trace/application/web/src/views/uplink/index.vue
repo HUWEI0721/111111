@@ -68,7 +68,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="捕捞时长:">
+              <el-form-item label="制造时长:">
                 <el-input :value="calculateDuration" readonly>
                   <template slot="append">小时</template>
                 </el-input>
