@@ -71,7 +71,7 @@
 
           <div class="progress-section">
             <el-steps :active="getActiveStep(item)" finish-status="success" align-center>
-              <el-step title="捕捞" description="已完成捕捞">
+              <el-step title="出厂" description="已完成出厂">
                 <template slot="icon">
                   <i class="el-icon-goods"></i>
                 </template>
@@ -392,7 +392,7 @@ export default {
       } else if (item.distillery_input.moutai_productionTime) {
         return '酿造完成'
       }
-      return '已捕捞'
+      return '已出厂'
     },
     toggleExpand(item) {
       this.$set(item, 'isExpanded', !item.isExpanded)
@@ -559,7 +559,7 @@ export default {
     },
     getStepDescription(item, step) {
       const descriptions = {
-        1: `捕捞时间: ${item.brewer_input.moutai_end || '未知'}`,
+        1: `出厂时间: ${item.brewer_input.moutai_end || '未知'}`,
         2: `酿造时间: ${item.distillery_input.moutai_productionTime || '未开始'}`,
         3: `运输时间: ${item.driver_input.driver_transport || '未开始'}`,
         4: `销售时间: ${item.shop_input.shop_sellTime || '未开始'}`
